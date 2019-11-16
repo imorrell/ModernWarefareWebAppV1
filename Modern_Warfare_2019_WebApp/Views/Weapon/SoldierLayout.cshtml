@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "SoldierLayout";
+}
+
+
+@model Modern_Warfare_2019_WebApp.Models.Soldier
+
+<h1 style="text-align: center; color: white;"><strong>Soldier Layout</strong></h1>
+@if (Model.CodeName == "Terminator")
+{
+    <div class="gunLoadOutPic">
+        <img src="~/pictures/modern-warfare-class-seup-kilo-aug.webp" alt="Terminator Layout" height="500" width="500" />
+    </div>
+    <br />
+    <div class="layoutPic">
+        <img src="~/pictures/terminatorpic.gif" alt="Terminator Pic" height="500" width="500" />
+    </div>
+}
+else if (Model.CodeName == "Run and Gun")
+{
+    <div class="gunLoadOutPic">
+        <img src="~/pictures/RunAndGun.webp" alt="Run and Gun" height="500" width="500" />
+    </div>
+    <br />
+    <div class="layoutPic">
+        <img src="~/pictures/sprayandpray.gif" alt="Spray and pray" height="500" width="500" />
+    </div>
+}
+else if (Model.CodeName == "Skull Crusher")
+{
+    <div class="gunLoadOutPic">
+        <img src="~/pictures/SkullCrusher.webp" alt="Skull Crusher" height="500" width="500" />
+    </div>
+
+    <div class="layoutPic">
+        <img src="~/pictures/headshot.gif" alt="Headshot" height="500" width="500" />
+    </div>
+}
+else
+{
+    <div class="gunLoadOutPic">
+        <img src="~/pictures/PowerAndPrecision.webp" alt="Surgeon" height="500" width="500" />
+    </div>
+    <br />
+    <div class="layoutPic">
+        <img src="~/pictures/John-Wick-Chapter-2-john-wick-40243219-500-208.gif" alt="Accurate Shot" height="500" width="500" />
+    </div>
+}
+
+<div class="weaponLayout">
+    <h2><strong>Welcome soldier. You chose the @Model.CodeName layout. Below is your artillery.</strong></h2>
+    <br />
+
+    <h3>Weapon: </h3>
+    <p>@Model.PrimaryWeapon</p>
+    <br />
+
+    <h3>Primary Attachments: </h3>
+    @foreach (string item in Model.PrimaryAttachments)
+    {
+        <p>@item</p>
+    }
+    <br />
+
+    <h3>Secondary Weapon: </h3>
+    <p>@Model.SecondaryWeapon</p>
+    <br />
+
+    <h3>Secondary Attachments: </h3>
+    @foreach (string item in Model.SecondaryAttachments)
+    {
+        <p>@item</p>
+    }
+    <br />
+
+    <h3>Perks: </h3>
+    @foreach (string item in Model.Perks)
+    {
+        <p>@item</p>
+    }
+    <br />
+
+    <h3>Equipment: </h3>
+    @foreach (string item in Model.Eqipment)
+    {
+        <p>@item</p>
+    }
+    <br />
+</div>
+
+
+

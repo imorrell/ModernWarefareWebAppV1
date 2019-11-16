@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style=" text-align:center; color: white;" ><strong>Grab the strap, Go to war!</strong></h1>
+<br />
+
+<form asp-controller="Weapon" asp-action="SoldierLayout" method="get">
+    <div class="form-group">
+        <label>Soldier Name</label>
+        <input class="form-control" type="text" name="Name" value="" required />
+    </div><br />
+    <div class="form-group">
+        <label>Age</label>
+        <input class="form-control" type="number" name="Age" value="" required />
+    </div> <br /> <br />
+    <div class="form-group">
+        <label>Choose Soldier Layout</label> <br />
+        <select class="form-control" name="CodeName">
+            <option value="Terminator">Terminator</option>
+            <option value="RunAndGun">Run & Gun</option>
+            <option value="SkullCrusher">Skull Crusher</option>
+            <option value="Surgeon">Surgeon</option>
+        </select>
+    </div> 
+    <div id="Terminator" class="Descriptions">
+        This loadout combines two of Modern Warfare'sbest early-game<br /> 
+        weapons to form a great pairing Pelt opponents from medium<br /> 
+        range with the Kilo and shred from up close with the AUG.<br /> 
+        This one is great for an all-purpose approach that doesn't<br />
+        involve sniping. 
+    </div><br />
+    <div id="RunAndGun" class="Descriptions">
+        For those who want to purely run and gun, this is one P90<br /> 
+        offering that may suit taste. SMGs are one of the better<br />
+        weapon classes in Modern Warfare right now, and this loadout<br />
+        allows you to make use of one of the best ones in the game.
+    </div><br />
+    <div id="SkullCrusher" class="Descriptions">
+        If you like to snipe but don't have a ton of patience, this<br /> 
+        is the class setup for you. In both attachments and Perks,<br />
+        that this build is all about fast ADS speed and having the<br /> 
+        ability to heal in pressure situations. After all, if you're<br />
+        taking risky shots, you'll need a way to recover after being<br />
+        spotted.
+    </div><br />
+    <div id="Surgeon" class="Descriptions">
+        For the M13, the situation should feel familiar except<br />
+        for tacking on a slightly more tailored barrel. Beyond<br />
+        that, the usual suspects show up here. You essentially<br />
+        want a build that prioritizes accuracy and power above<br />
+        all else.
+    </div><br />
+
+    <button type="submit">War Ready</button>
+
+</form>
+
+
